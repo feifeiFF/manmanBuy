@@ -1,0 +1,204 @@
+@import "variable";
+// 一般化浏览器样式
+@import "normalize";
+//  统一浏览器样式
+@import "base";
+// 公共样式
+@import "common";
+
+
+/*  搜索框 */ 
+.m_search_box{
+   position: relative;
+   width:100%;
+   height: 1rem;
+   background-color: #fefefe;
+   margin-bottom: 16rem/@base;
+
+ .ipt{ 
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   padding: 12rem/@base 150rem/@base  12rem/@base 25rem/@base;
+
+   input{   
+     vertical-align: top;
+     border-radius: 50px;
+     width: 96%;
+     height: 100%;
+     text-indent: 1.5em;
+     font-size: 22rem/@base;
+     background-color: #f1f1f1;
+   }
+ }
+
+ .btn{
+   position: absolute;
+   top: 0;
+   right: 0;
+   width:160rem/@base;
+   height: 1rem;
+   font-size: 26rem/@base;
+   padding: 13rem/@base 24rem/@base ;
+
+   input{
+     width: 100%;
+     height:100%;
+     border-radius: 50rem;
+     outline: none;
+     border: none;
+     background-color: #ff841d;
+     color: #fff;
+     outline-style: none;
+    -webkit-tap-highlight-color: rgba(255, 253, 253, 0);
+   }
+ }
+
+}
+
+
+/* 导航  */
+.m_nav{
+  width: 100%;
+  background-color: #fff;
+
+  ul{
+    padding: 10rem/@base 0; 
+  }
+
+  li{
+    float: left;
+    width: 25%;
+    margin-top: 25rem/@base;
+    
+    a{
+      text-align: center;
+      display: block;
+      width: 100%;
+      height: 100%;
+     
+
+      img{
+       width: 1rem;
+       height: 1rem;
+       margin: 0 auto;
+      }
+
+      p{
+        margin-top: 8rem/@base;
+        font-size: 0.24rem;
+        line-height: 34rem/@base;
+      }
+    }
+  }
+}
+
+/* 超值推荐 */
+.m_recommaend{
+
+ .rmd_title{
+  height: 62rem/@base;
+  background-image: linear-gradient(to bottom,#ffaf47,#ff9000);
+    
+  h2{
+    line-height: 62rem/@base;
+    font-size: 26rem/@base;
+    font-weight: 500;
+    padding-left: 15rem/@base;
+    padding-right: 15rem/@base;
+    color: #fff;
+
+    i{
+      line-height: 62rem/@base;
+    }
+  }
+ }
+
+ .rmd_content{
+   width: 100%;
+
+   li{
+     height: 230rem/@base;
+     background-color: #fff;
+     padding:20rem/@base 15rem/@base;
+     border-bottom: 2rem/@base solid #e7e7e7;
+
+     .img{
+       float: left;
+       width: 24%;
+       height: 100%;
+       float: left;
+     }
+     .desc{
+       float: left;
+       width: 74%;
+       height: 100%;
+       overflow: hidden;
+       padding-left: 15rem/@base;
+
+       .first{
+         font-size: 24rem/@base;
+         height: 150rem/@base;
+
+         .org{
+           color: #eda431;
+         }
+       }
+     
+     .second{
+      color: #a1a1a1;
+      font-size: 20rem/@base;
+    }
+   }
+ }
+}
+}
+
+/* 更多信息 */ 
+.m_more{
+  width: 100%;
+  height: 75rem/@base;
+  padding: 20rem/@base 15rem/@base 0 20rem/@base ;
+  text-align: center;
+
+  a{
+    padding: 0;
+    margin: 0;
+    width: 90%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    font-size: 24rem/@base;
+    padding-top: 5rem/@base;
+    line-height: 40rem/@base;
+    border: 1px solid #e7e7e7;
+    background-color: #f9f9f9;
+  }
+}
+
+
+/* 品牌排行 */ 
+.m_brandRank{
+  margin-top: 20rem/@base;
+  margin-bottom: 40rem/@base;
+
+  .brand_title{
+    height: 62rem/@base;
+    background-image: linear-gradient(to bottom,#ffaf47,#ff9000);
+      
+    h2{
+      line-height: 62rem/@base;
+      font-size: 26rem/@base;
+      font-weight: 500;
+      padding-left: 15rem/@base;
+      padding-right: 15rem/@base;
+      color: #fff;
+  
+      i{
+        line-height: 62rem/@base;
+      }
+    }
+   }
+}
+
+

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./lib/flexible/flexible.js"></script>
+   <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <title>manmanBuy</title>
+</head>
+<body>
+  <div class="m_container">
+   <!-- 头部  -->
+  <div class="m_header clearfix">
+      <div class="logo">
+        <a href="#"><img src="./images/header_logo.png" alt=""></a>
+      </div>
+      <div class="app">
+        <a href="#"><img src="./images/header_app.png" alt=""></a>
+      </div>
+ </div>
+
+ <!-- 搜索框 -->
+ <div class="m_search_box">
+     <div class="ipt fl">
+        <input type="text" placeholder="请输入您想比价的商品">
+     </div>
+     <div class="btn fr">
+      <input type="button" value="搜索">
+     </div>
+ </div>
+
+ <!--  导航  -->
+ <div class="m_nav clearfix">
+      <ul class="clearfix nav_box">     
+      </ul>
+ </div>
+
+ <!--  超值折扣推荐 -->
+ <div class="m_recommaend">
+     <div class="rmd_title">
+         <h2>超值折扣推荐  <i class="fa fa-chevron-circle-right fr"> </i></h2>         
+     </div>
+     <div class="rmd_content">
+          <ul>       
+         </ul>
+     </div>
+ </div>
+
+
+ <!--  更多 -->
+ <div class="m_more">
+     <a href="#">更多优惠信息&gt;&gt;</a>
+ </div>
+
+ <!-- 品牌排行 -->
+ <div class="m_brandRank">
+    <div class="brand_title">
+        <h2> 品牌排行 <i class="fa fa-chevron-circle-right fr"> </i></h2>         
+    </div>
+ </div>
+
+ <!-- 尾部 -->
+ <div class="m_footer">
+    <div class="top clearfix">
+      <a href="#" class="fl">登录</a>
+      <a href="#" class="fl register">注册</a>
+      <a href="#" class="fl">返回顶部</a>
+    </div>
+    <div class="bottom">
+        <p class="downApp clearfix ">
+            <a href="#" class="colRed">手机APP下载 &nbsp;</a>
+            <a href="#">&nbsp;慢慢买手机版&nbsp;</a>
+            <a href="#" class="col666" >&nbsp;--掌上比价平台</a>
+        </p>       
+        <p class="col666 link">m.manmanbuy.com</p>
+ </div>
+    
+
+ </div>
+ 
+ </div>
+
+  <!-- 1--导航部分模版   -->
+  <script type="text/html" id="navTmp">
+    {{  each result v  i }}    
+    <li><a href="{{ v.titlehref}}" data-id="{{ v.indexmenuId }}">{{@ v.img }}<p>白菜价</p></a></li>  
+    {{ /each }}
+  </script>
+  <!--2-- 折扣优惠部分模版  -->
+  <script type="text/html" id="recommaendTmp">
+    {{ each result v i }}
+     <li>
+       <% if i==7 {%>
+       <a href="{{ v.titlehref }}"  data-indexmenuId="{{ v.indexmenuId }}" class="more">
+       <% }else{ %>
+        <a href="{{ v.titlehref }}"  data-indexmenuId="{{ v.indexmenuId }}">
+       <% }%>   
+          <div class="img ">{{@ v.productImgSm}}</div>
+          <div class="desc">
+            <p class="first">{{ v.productName }} <span class="org">{{ v.productPinkage }}</span></p>
+            <p class="second"><span class="fl">{{ v.productFrom }} | {{ v.productTime }}</span><span class="com_num fr">{{ v.productComCount }}</span></p>
+          </div>
+        </a>
+       </li>
+    {{ /each }} 
+  </script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/index.js"></script>
+</body>
+</html>
