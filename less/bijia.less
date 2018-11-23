@@ -1,0 +1,242 @@
+@import "common";
+
+.m_container{
+  background-color: #fff;
+  height: 2000px;
+}
+/*  搜索框 */ 
+.m_search_box{
+  position: relative;
+  width:100%;
+  height: 1rem;
+  background-color: #fefefe;
+
+.ipt{ 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 12rem/@base 150rem/@base  12rem/@base 25rem/@base;
+
+  input{   
+    vertical-align: top;
+    border-radius: 50px;
+    width: 96%;
+    height: 100%;
+    text-indent: 1.5em;
+    font-size: 22rem/@base;
+    background-color: #f1f1f1;
+  }
+}
+
+.btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width:160rem/@base;
+  height: 1rem;
+  font-size: 26rem/@base;
+  padding: 13rem/@base 24rem/@base ;
+
+  input{
+    width: 100%;
+    height:100%;
+    border-radius: 50rem;
+    outline: none;
+    border: none;
+    background-color: #ff841d;
+    color: #fff;
+    outline-style: none;
+   -webkit-tap-highlight-color: rgba(255, 253, 253, 0);
+  }
+}
+
+}
+
+
+/*  路径导航 */ 
+.m_path_nav{
+  width: 100%;
+  border-top: 2rem/@base solid #ccc;
+  border-bottom: 2rem/@base solid #ccc;
+  width: 100%;
+  height: 67rem/@base;
+  background-image:linear-gradient(to top,#eeeeee,#ffffff);
+  padding-left: 20rem/@base;
+
+ a{
+   line-height: 67rem/@base;
+   font-size: 24rem/@base;
+ 
+ }
+ .btn{
+   width: 107rem/@base;
+   height: 50rem/@base;
+   padding-right: 20rem/@base;
+      
+   
+   button{
+     margin-top: 7rem/@base;
+     width: 100%;
+     height: 100%;
+     font-size: 24rem/@base;
+     border-radius: 10rem/@base;
+     background-image: linear-gradient(to bottom,#eeeeee,#ffffff);
+     background-color: transparent;
+   }
+ }
+
+  
+}
+
+/* 商品详情 */  
+.m_details{
+  margin: 30rem/@base;
+  height: 440rem/@base;
+  position: relative;
+  h3{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    height: 60rem/@base;
+    font-size: 30rem/@base;
+    line-height: 60rem/@base;
+  }
+
+  img{
+    margin: 0 auto;
+    width: 304rem/@base;
+    height: 304rem/@base;
+   
+  }
+
+  .collect{
+    font-size: 30rem/@base;
+    color: #fff;
+    width: 80rem/@base;
+    height: 80rem/@base;
+    line-height: 80rem/@base;
+    text-align: center;
+    background-color: #7DDA2E;
+    border-radius: 50%;
+    position: absolute;
+    right: 20rem/@base;
+    bottom: 20rem/@base;
+  }
+}
+
+/* 商品参数 */
+.m_description{
+  width: 100%;
+  border-top: 2rem/@base solid #d84d00;
+  border-bottom:2rem/@base solid #d84d00 ;
+
+  div{
+    width: 33.3%;
+    line-height: 64rem/@base;
+    text-align: center;
+    background-color: #FFC328;
+
+    &:nth-child(2){
+       border-left: 2rem/@base solid #d84d00;
+       border-right: 2rem/@base solid #d84d00;
+    }
+    &.active{
+      background-color: #ff9d1e;
+   }
+
+  }
+  
+} 
+
+/* 产品购买 */ 
+.m_goShop{
+  height: 190rem/@base;
+
+  .top{
+    td{
+      height: 30rem/@base;
+
+      img{
+        width: 30rem/@base;
+        height: 30rem/@base;
+      }
+      &.red{
+        color: #ff1d22;
+      }
+    }
+    padding: 35rem/@base 15rem/@base;
+    height: 50%;
+    width: 100%;
+    border-bottom: 2px solid #ccc;
+  }
+  .bottom{
+    padding: 15rem/@base;
+    font-size: 22rem/@base;
+    color: #878787;
+    line-height: 30rem/@base;
+
+    
+  }
+}
+
+/* 评论区 */
+.m_common_area{
+   width: 100%;
+   border-bottom: 2rem/@base solid #ccc;
+   border-top: 4rem/@base solid #6e6e6e;
+  
+
+   .com_topBar{
+      background-color: #dbdbdb;
+     h4{
+
+       font-size: 26rem/@base;
+       line-height: 66rem/@base;
+       text-align: center;
+     }
+   }
+
+
+   .from{
+    padding: 15rem/@base;
+     height: 70rem/@base;
+     display: block;
+     width: 100%;
+     font-size: 20rem/@base;
+   }
+   li{
+     border-bottom: 1rem/@base solid #ccc;
+     background-color: #fff;
+   }
+   .a_talk{
+    display: block;
+     width: 100%;
+     font-size: 22rem/@base;
+     .talk{     
+      padding: 15rem/@base;
+     }
+   }
+ 
+   } 
+
+/* 更多信息 */ 
+.m_more{
+  width: 100%;
+  height: 85rem/@base;
+  padding: 20rem/@base 15rem/@base 0 20rem/@base ;
+  text-align: center;
+  margin-bottom: 30rem/@base;
+  a{  
+    width: 90%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    font-size: 24rem/@base;
+    padding-top: 5rem/@base;
+    line-height: 45rem/@base;
+    border: 1px solid #ccc;
+    background-image: linear-gradient(to top,#ccc,#f1f1f1);
+  }
+}
+

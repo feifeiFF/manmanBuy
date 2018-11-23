@@ -29,9 +29,9 @@ $(function(){
   }
 
   //3 -- 点击更多,显示更多
-
-
-
+$(".m_nav .nav_box").on("click",".more",function(){
+    $(".m_nav ul").toggleClass("hig");
+})
 
    
 

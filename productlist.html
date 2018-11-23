@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./lib/flexible/flexible.js"></script>
+   <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+   <link rel="stylesheet" href="./css/common.css">
+   <link rel="stylesheet" href="./css/productlist.css">
+  <title>manmanBuy</title>
+</head>
+<body>
+  <div class="m_container">
+   <!-- 头部  -->
+  <div class="m_header clearfix">
+      <div class="logo">
+        <a href="#"><img src="./images/header_logo.png" alt=""></a>
+      </div>
+      <div class="app">
+        <a href="#"><img src="./images/header_app.png" alt=""></a>
+      </div>
+ </div>
+
+  <!-- 搜索框 -->
+  <div class="m_search_box">
+      <div class="ipt fl">
+         <input type="text" placeholder="请输入您想比价的商品">
+      </div>
+      <div class="btn fr">
+       <input type="button" value="搜索">
+      </div>
+  </div>
+
+
+  <!-- 路径导航 -->
+  <div class="m_path_nav">
+      <a href="index.html">首页</a>
+      <span>&gt;</span>
+      <a href="category.html">全部分类</a>
+      <span>&gt;</span>
+      <a href="#" class="currentPosition"><span>电视</span></a>
+      <span>&gt;</span>
+
+      <div class="fr btn">
+        <button>筛选</button>
+      </div>
+  </div>
+ <div class="m_tv_content">       
+  </div>
+
+
+  <!--  分页导航 -->
+  <div class="m_paging clearfix">
+     <div class="pre fl">
+        <button>上一页</button>
+     </div>
+     <div class="currentPage fl">
+        <button>1/3</button>
+     </div>
+      <div class="next fl">
+         <button>下一页</button>
+      </div>
+  </div>
+
+  <!-- 尾部 -->
+   <div class="m_footer">
+      <div class="top clearfix">
+        <a href="login.html" class="fl">登录</a>
+        <a href="register.html" class="fl register">注册</a>
+        <a href="javascript:void(0);" class="fl toTop">返回顶部</a>
+      </div>
+      <div class="bottom">
+          <p class="downApp clearfix ">
+              <a href="#" class="colRed">手机APP下载 &nbsp;</a>
+              <a href="#">&nbsp;慢慢买手机版&nbsp;</a>
+              <a href="#" class="col666">&nbsp;--掌上比价平台</a>
+          </p>       
+          <p class="col666 link">m.manmanbuy.com</p>
+   </div>  
+   </div>
+
+   <!--模版引擎  路径导航  --> 
+   <script type="text/html" id="pathTmp">
+    {{ each  result v  i }}
+      <span data-categoryId="{{v.categoryId}}" data-titleId="{{ v.titleId }}"> {{ v. category }}</span>
+    {{ /each }}
+  </script>
+
+  <!-- 模版引擎  产品列表 -->
+  <script type="text/html" id="productListTmp">
+    <ul  data-totalCount="totalCount" data-pageSize="pagesize">
+    {{ each result v i }}
+    <li >     
+        <a href="bijia.html?productId={{ v.productId }}&categoryId={{ v.categoryId}}"  productId="{{ v.productId }}">
+          <div class="img ">{{@v.productImg }}</div>
+          <div class="desc">
+            <p class="first">{{v.productName }}</p>
+            <p><span class="colEa3">{{ v.productPrice }}</span></p>
+            <p class="second"><span class="offer">{{ v.productQuote }} </span><span>{{ v.productCom }}</span></p>
+          </div>
+        </a>
+      </li>   
+      
+    {{ /each }}
+    </ul>
+  </script>
+ </div>
+ <script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/productList.js"></script>
+</body>
+</html>

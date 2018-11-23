@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./lib/flexible/flexible.js"></script>
+   <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+   <link rel="stylesheet" href="./css/common.css">
+   <link rel="stylesheet" href="./css/bijia.css">
+  <title>manmanBuy</title>
+</head>
+<body>
+  <div class="m_container">
+   <!-- 头部  -->
+  <div class="m_header clearfix">
+      <div class="logo">
+        <a href="#"><img src="./images/header_logo.png" alt=""></a>
+      </div>
+      <div class="app">
+        <a href="#"><img src="./images/header_app.png" alt=""></a>
+      </div>
+ </div>
+
+  <!-- 搜索框 -->
+  <div class="m_search_box">
+      <div class="ipt fl">
+         <input type="text" placeholder="请输入您想比价的商品">
+      </div>
+      <div class="btn fr">
+       <input type="button" value="搜索">
+      </div>
+  </div>
+
+   <!-- 路径导航 -->
+   <div class="m_path_nav">
+      <a href="index.html">首页</a>
+      <span>&gt;</span>
+      <a href="category.html">全部分类</a>
+      <span>&gt;</span>
+      <a href="#" class="currentPosition"><span>电视</span></a>
+      <span>&gt;</span>
+
+      <div class="fr btn">
+        <button>筛选</button>
+      </div>
+  </div>
+ <div class="m_tv_content">       
+  </div>
+
+
+ <div class="m_big_product">
+    <!--  商品详情 -->
+  <div class="m_details">
+      <h3>索尼/Sony A7R 全画幅数码微单相机 单机身</h3>   
+       <img src="./images/product.jpg" alt="" srcset="">
+       <div class="collect">收藏</div>    
+  </div>
+  <!--  商品参数 -->
+  <div class="m_description clearfix">
+     <div class="fl active">比价购买</div>
+     <div class="fl">产品参数</div>
+     <div class="fl">评论（12300）</div>
+  </div>
+  <!-- 去购买 -->
+  <div class="m_goShop">
+     <div class="top">
+
+     </div>
+     <div class="bottom">       
+        * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+      
+     </div>
+     
+  </div>
+ </div>
+ 
+  <!-- 评论区域 -->
+  <div class="m_common_area">
+     <div class="com_topBar">
+         <h4>网友评价</h4>
+     </div>
+     <ul class="all_com">     
+     </ul>
+  </div>
+
+   <!--  更多 -->
+ <div class="m_more">
+    <a href="#">查看更多评价</a>
+</div>
+
+
+
+
+  <!-- 尾部 -->
+ <div class="m_footer">
+      <div class="top clearfix">
+        <a href="#" class="fl">登录</a>
+        <a href="#" class="fl register">注册</a>
+        <a href="#" class="fl toTop">返回顶部</a>
+      </div>
+      <div class="bottom">
+          <p class="downApp clearfix ">
+              <a href="#" class="colRed">手机APP下载 &nbsp;</a>
+              <a href="#">&nbsp;慢慢买手机版&nbsp;</a>
+              <a href="#" class="col666">&nbsp;--掌上比价平台</a>
+          </p>       
+          <p class="col666 link">m.manmanbuy.com</p>
+   </div>  
+   </div>
+   
+   <!--模版引擎  路径导航  -------------> 
+   <script type="text/html" id="pathTmp">
+    {{ each  result v  i }}
+      <span data-categoryId="{{v.categoryId}}" data-titleId="{{ v.titleId }}"> {{ v. category }}</span>
+    {{ /each }}
+  </script>
+
+  <!-- 模版 商品详情 -------------------->
+  <script type='text/html' id="detailsTmp">
+   {{ each result v i }}
+     <!--  商品详情 -->
+  <div class="m_details">
+      <h3>{{ v.productName}}</h3>   
+      {{@v.productImg}}
+       <div class="collect">收藏</div>    
+  </div>
+   <!--  商品参数 -->
+   <div class="m_description clearfix">
+      <div class="fl active">比价购买</div>
+      <div class="fl">产品参数</div>
+      <div class="fl">评论（12300）</div>
+   </div>
+   <!-- 去购买 -->
+   <div class="m_goShop">
+      <div class="top">
+        {{@v.bjShop}}
+      </div>
+      <div class="bottom">       
+         * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+     </div>      
+   </div>
+  </div>  
+   {{ /each }}
+  
+  </script>
+
+  <!-- 模版 商品评论 ----------------- -->
+  <script type="text/html" id="comTmp">
+    {{ each result v i }}
+    <li data-id="{{v.comId}}" data-categoryId={{ v.categoryId }}>
+        <a href="" class="from">
+         <div class="who clearfix">
+            <span class="fl">{{ v.comName }}</span>
+            <span class="fr">{{ v.comTime }}</span>
+            <span>{{ v.comFrom}}</span>
+         </div>
+       </a>
+       <a href="" class="a_talk"> 
+         <div class="talk">              
+           {{ v.comContent }}
+         </div>
+       </a>
+     </li>     
+    {{/each }}  
+  </script>
+ </div>
+ <script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/bijia.js"></script>
+</body>
+</html>

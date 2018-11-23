@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./lib/flexible/flexible.js"></script>
+   <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/moneyctrl.css">
+
+  <title>manmanBuy</title>
+</head>
+<body>
+  <div class="m_container">
+   <!-- 头部  -->
+  <div class="m_header clearfix">      
+      <i class="fa fa-angle-left back"></i>
+      <h3 class="fl">省钱控-最新优惠</h3>
+      <div class="app fr">
+        <a href="#"><img src="./images/header_app.png" alt=""></a>
+      </div>
+ </div>
+
+<!-- 产品列表 -->
+  <div class="m_moneyctrl_content">
+          <ul>    
+            <li>     
+                  <a href="#"  productId="{{ v.productId }}">
+                    <div class="img "><img src="./images/jiangyou.jpg" alt="" srcset=""></div>
+                    <div class="desc">
+                      <p class="first">移动端凑单品：海天 鲜味 生抽 1.28L
+                          <span class="org">10.9元</span></p>
+                      <p class="second"><span class="fl">京东商城| 10-25 14:10</span><span class="com_num fr">有1人评论</span></p>
+                    </div>
+                  </a>
+            </li>   
+         </ul>
+     </div>
+
+ <!--  分页导航 -->
+  <div class="m_paging clearfix">
+      <div class="pre fl">
+         <button>上一页</button>
+      </div>
+      <div class="currentPage fl">
+         <button>1/3</button>
+      </div>
+       <div class="next fl">
+          <button>下一页</button>
+       </div>
+   </div>
+
+  <!-- 尾部 -->
+   <div class="m_footer">
+      <div class="top clearfix">
+        <a href="#" class="fl">登录</a>
+        <a href="#" class="fl register">注册</a>
+        <a href="javascript:void(0);" class="fl toTop">返回顶部</a>
+      </div>
+      <div class="bottom">
+          <p class="downApp clearfix ">
+              <a href="#" class="colRed">手机APP下载 &nbsp;</a>
+              <a href="#">&nbsp;慢慢买手机版&nbsp;</a>
+              <a href="#" class="col666">&nbsp;--掌上比价平台</a>
+          </p>       
+          <p class="col666 link">m.manmanbuy.com</p>
+   </div>  
+   </div>
+
+   <!-- 模版  商品列表 -->
+   <script type="text/html" id="moneyCtrlTmp">
+    <ul>    
+      {{ each result v i }}
+      <li>     
+          <a href="moneyproduct.html?productId={{ v.productId }}"  productId="{{ v.productId }}">
+            <div class="img ">{{@v.productImgSm }}</div>
+            <div class="desc">
+              <p class="first">{{ v.productName }}
+                  <span class="org">{{ v.productPinkage }}</span></p>
+              <p class="second"><span class="fl">{{v.productFrom}}| {{ v.productTime }}</span><span class="com_num fr">{{v.productComCount}}</span></p>
+            </div>
+          </a>
+    </li>
+      {{/each }}   
+     </ul>
+   
+  </script> 
+   
+ </div>
+ <script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/moneyctrl.js"></script>
+</body>
+</html>

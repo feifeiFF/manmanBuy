@@ -33,7 +33,7 @@
 
  <!--  导航  -->
  <div class="m_nav clearfix">
-      <ul class="clearfix nav_box">     
+      <ul class="clearfix nav_box hig">     
       </ul>
  </div>
 
@@ -43,7 +43,16 @@
          <h2>超值折扣推荐  <i class="fa fa-chevron-circle-right fr"> </i></h2>         
      </div>
      <div class="rmd_content">
-          <ul>       
+          <ul>    
+            <li>     
+                  <a href="#"  productId="{{ v.productId }}">
+                    <div class="img ">{{@ v.productImgSm}}</div>
+                    <div class="desc">
+                      <p class="first">{{ v.productName }} <span class="org">{{ v.productPinkage }}</span></p>
+                      <p class="second"><span class="fl">{{ v.productFrom }} | {{ v.productTime }}</span><span class="com_num fr">{{ v.productComCount }}</span></p>
+                    </div>
+                  </a>
+            </li>   
          </ul>
      </div>
  </div>
@@ -85,18 +94,15 @@
   <!-- 1--导航部分模版   -->
   <script type="text/html" id="navTmp">
     {{  each result v  i }}    
-    <li><a href="{{ v.titlehref}}" data-id="{{ v.indexmenuId }}">{{@ v.img }}<p>白菜价</p></a></li>  
+    <li><a href="{{ v.titlehref}}" data-id="{{ v.indexmenuId }}" class="{{ v.indexmenuId ==7?'more':''}}">{{@ v.img }}<p>{{ v.name }}</p></a></li>  
     {{ /each }}
   </script>
+  
   <!--2-- 折扣优惠部分模版  -->
   <script type="text/html" id="recommaendTmp">
     {{ each result v i }}
-     <li>
-       <% if i==7 {%>
-       <a href="{{ v.titlehref }}"  data-indexmenuId="{{ v.indexmenuId }}" class="more">
-       <% }else{ %>
-        <a href="{{ v.titlehref }}"  data-indexmenuId="{{ v.indexmenuId }}">
-       <% }%>   
+     <li>     
+        <a href="#"  productId="{{ v.productId }}">
           <div class="img ">{{@ v.productImgSm}}</div>
           <div class="desc">
             <p class="first">{{ v.productName }} <span class="org">{{ v.productPinkage }}</span></p>
