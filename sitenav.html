@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="./lib/flexible/flexible.js"></script>
    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
-   <link rel="stylesheet" href="./css/moneyproduct.css">
+   <link rel="stylesheet" href="./css/sitenav.css">
   <title>manmanBuy</title>
 </head>
 <body>
@@ -14,15 +14,26 @@
    <!-- 头部  -->
   <div class="m_header clearfix">
       <i class="fa fa-angle-left back"></i>
-      <h3 class="fl">国内折扣</h3>
+      <h3 class="fl">商城导航</h3>
       <div class="app">
         <a href="#"><img src="./images/header_app.png" alt=""></a>
       </div>
  </div>
+ 
+ <!-- 导航条  -->
+  <div class="m_nav_list">
+    <ul class="nav_box clearfix">
+      <li class="nav_list">
+        <a href="#">
+        <img src="./images/360.png" alt="">
+        <span>京东商城</span>
+       </a>
+     </li>
 
- <!--  商品详情  -->
- <div class="m_moneyproduct">  
- </div>
+   
+    </ul>
+
+  </div>
 
   <!-- 尾部 -->
    <div class="m_footer">
@@ -41,57 +52,21 @@
    </div>  
    </div>
 
-   <!--  1--国内折扣详情页 -->
-   <script type="text/html" id="detailsTmp">
-    {{ each result v i }}
-    <h3>{{ v.productName }}</h3>
-    <p class="subHead">
-      <span class="form">{{ v.productFrom }}</span>
-      <span class="time">{{ v.productTime }}</span>
-      <span class="who"> {{v.productTips}}</span>
-    </p>
-    <div class="content">
-      <div  class="fr rigSmall">        
-        {{@v.productImgSm}}
-      </div>    
-       <p>
-         {{ v.productInfo1 }}
-       </p>
-       <p>
-         {{ v.productInfo2 }}
-       </p>
-       {{ if v.productImgLg !=  "" }}
-      <div class="class="botBig>
-        {{@v.productImgLg }}
-      </div>
-      {{ else}}
-      <div class="class="botBig>
-          {{@v.productImg2  }}
-        </div>
-      {{ /if }}
-     
-    </div>
-    {{ if v.productCity !== undefined||"" }}
-    <div class="city">
-        {{@ v.productCity}}
-    </div>
-    {{ else }}
-     <p>暂无城市信息</p>
-    {{ /if }}
-    <div class="goShop">
-      <div class="go">前往购买</div>
-       <img src="./images/mmbweixin2.png" alt="">
-    </div>
-    <div class="new_common">   
-       {{@v.productComment}}
-    </div>
-  {{ /each }}
+   <!-- 模版，渲染网站导航 -->
+   <script type="text/html" id="sitenavTmp">
+   {{ each result v i }}
+   <li class="nav_list" data-navId='{{ v.navId }}'>
+      <a href="{{ v.navHref }}">
+      <img src="{{ v.navImg }}" alt="" title="{{ v.navTitle }}">
+      <span>{{ v.navTitle }}</span>
+     </a>
+   </li> 
+   {{ /each }}  
   </script>
-   
  </div>
  <script src="./lib/jquery/jquery.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/moneyproduct.js"> </script>
+<script src="./js/sitenav.js"></script>
 </body>
 </html>

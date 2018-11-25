@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./lib/flexible/flexible.js"></script>
+   <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+   <link rel="stylesheet" href="./css/couponprodct.css">
+   <link rel="stylesheet" href="./lib/Swiper/css/swiper.min.css">
+  <title>manmanBuy</title>
+</head>
+<body>
+  <div class="m_container">
+   <!-- 头部  -->
+  <div class="m_header clearfix">
+      <i class="fa fa-angle-left back"></i>
+      <h3 class="fl"> 肯德基优惠券</h3>
+      <div class="app">
+        <a href="#"><img src="./images/header_app.png" alt=""></a>
+      </div>
+ </div>
+
+ <!-- tips -->
+ <p class="tips">--点餐前出示手机中的优惠券，即可享受优惠--</p>
+
+  <!-- 商品 -->  
+  <div class="m_couponproduct">
+     <ul class="clearfix">  
+       <li class="coupon_list">
+           <div class="img_box fl">
+               <img src="./images/bcj.jpg" alt="">
+           </div>
+           <div class="desc">
+               <p class="title">
+                  C27  两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券
+               </p>
+               <p class="price">
+                 <strong>￥99</strong>
+               </p>
+               <p class="msg">有效期至12月12日<i class="arrow_right"></i></p>
+           </div>
+       </li>   
+       <li class="coupon_list">
+           <div class="img_box fl">
+               <img src="./images/bcj.jpg" alt="">
+           </div>
+           <div class="desc">
+               <p class="title">
+                  C27  两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券
+               </p>
+               <p class="price">
+                 <strong>￥99</strong>
+               </p>
+               <p class="msg">有效期至12月12日<i class="arrow_right"></i></p>
+           </div>
+       </li>   
+       <li class="coupon_list">
+           <div class="img_box fl">
+               <img src="./images/360.png" alt="">
+           </div>
+           <div class="desc">
+               <p class="title">
+                  C27  两人小食组 新奥尔良烤翅2块+薯条(中)+黄金鸡块5块+劲爆鸡米花(小) 2016年10月凭肯德基优惠券
+               </p>
+               <p class="price">
+                 <strong>￥99</strong>
+               </p>
+               <p class="msg">有效期至12月12日<i class="arrow_right"></i></p>
+           </div>
+       </li>   
+     </ul>
+  </div>
+
+
+  <!-- 尾部 -->
+   <div class="m_footer">
+      <div class="top clearfix">
+        <a href="#" class="fl">登录</a>
+        <a href="#" class="fl register">注册</a>
+        <a href="javascript:void(0)" class="fl toTop">返回顶部</a>
+      </div>
+      <div class="bottom">
+          <p class="downApp clearfix ">
+              <a href="#" class="colRed">手机APP下载 &nbsp;</a>
+              <a href="#">&nbsp;慢慢买手机版&nbsp;</a>
+              <a href="#" class="col666">&nbsp;--掌上比价平台</a>
+          </p>       
+          <p class="col666 link">m.manmanbuy.com</p>
+   </div>  
+   </div>
+
+
+   <!-- 回到顶部 -->
+   <div class="goTop hide"><i class="fa fa-arrow-up "></i></div> 
+
+
+   <!-- 模态框  -->
+   <div class="modal_box hide">
+      <div class="box">
+          <i class="fa fa-remove close"></i>
+          <div class="main_img">     
+              <div class="swiper-wrapper">
+                 <div class="swiper-slide">Slide 1</div>
+              </div>
+              <div class="swiper-button-prev swiper-button-black"></div>
+              <div class="swiper-button-next swiper-button-black"></div>
+          </div>
+          
+      </div>
+   </div>
+
+   <!-- 模版优惠券 -->
+   <script type="text/html" id="couponproductTmp">
+     {{ each  result v  i}}
+     <li class="coupon_list" data-couponProductId="{{ v.couponProductId }}" data-index="{{ i }}">
+        <div class="img_box fl">
+          {{@v.couponProductImg}}
+        </div>
+        <div class="desc">
+            <p class="title txt-cut-3">
+             {{v.couponProductName}}
+            </p>
+            <p class="price">
+              <strong>{{v.couponProductPrice}}</strong>
+            </p>
+            <p class="msg">{{v.couponProductTime }}<i class="arrow_right"></i></p>
+        </div>
+    </li>  
+      {{ /each }}
+   </script>
+   
+ </div>
+ <script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/IScroll/iscroll.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/couponproduct.js"> </script>
+<script src="./lib/Swiper/js/swiper.min.js"></script>
+</body>
+</html>

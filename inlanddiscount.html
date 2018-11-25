@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="./lib/flexible/flexible.js"></script>
    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
-   <link rel="stylesheet" href="./css/moneyproduct.css">
+   <link rel="stylesheet" href="./css/inlanddiscount.css">
   <title>manmanBuy</title>
 </head>
 <body>
@@ -20,10 +20,22 @@
       </div>
  </div>
 
- <!--  商品详情  -->
- <div class="m_moneyproduct">  
- </div>
 
+ <!-- 商品列表 -->
+ <div class="m_product">
+    <ul>
+      <li>
+        <a href="">
+          <img src="./images/product.jpg" alt="">
+          <div class="desc">
+              <h4 >西域美农新疆特产五星和田红枣250g*2</h4>
+              <p class="price">19.8元(5件99元)</p>
+              <p><span class="from">京东商城</span><span class="time">2018 12:20</span></p>
+          </div>
+        </a>
+      </li>    
+    </ul>
+ </div>
   <!-- 尾部 -->
    <div class="m_footer">
       <div class="top clearfix">
@@ -41,57 +53,27 @@
    </div>  
    </div>
 
-   <!--  1--国内折扣详情页 -->
-   <script type="text/html" id="detailsTmp">
-    {{ each result v i }}
-    <h3>{{ v.productName }}</h3>
-    <p class="subHead">
-      <span class="form">{{ v.productFrom }}</span>
-      <span class="time">{{ v.productTime }}</span>
-      <span class="who"> {{v.productTips}}</span>
-    </p>
-    <div class="content">
-      <div  class="fr rigSmall">        
-        {{@v.productImgSm}}
-      </div>    
-       <p>
-         {{ v.productInfo1 }}
-       </p>
-       <p>
-         {{ v.productInfo2 }}
-       </p>
-       {{ if v.productImgLg !=  "" }}
-      <div class="class="botBig>
-        {{@v.productImgLg }}
-      </div>
-      {{ else}}
-      <div class="class="botBig>
-          {{@v.productImg2  }}
+<!-- 模版 商品列表 -->
+<script type="text/template" id="productTmp">
+  {{ each result v i }}
+  <li>
+      <a href="discount.html?productid={{ v.productId }}">
+       {{@v.productImg}}
+        <div class="desc">
+            <h4 class="txt-cut-2">{{ v.productName }}</h4>
+            <p class="price txt-cut">{{ v.productPrice}}</p>
+            <p><span class="from">{{ v.productFrom }}</span><span class="time">{{ v.productTime }}</span></p>
         </div>
-      {{ /if }}
-     
-    </div>
-    {{ if v.productCity !== undefined||"" }}
-    <div class="city">
-        {{@ v.productCity}}
-    </div>
-    {{ else }}
-     <p>暂无城市信息</p>
-    {{ /if }}
-    <div class="goShop">
-      <div class="go">前往购买</div>
-       <img src="./images/mmbweixin2.png" alt="">
-    </div>
-    <div class="new_common">   
-       {{@v.productComment}}
-    </div>
+      </a>
+    </li>    
+
   {{ /each }}
-  </script>
-   
+</script>
+
  </div>
  <script src="./lib/jquery/jquery.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/moneyproduct.js"> </script>
+<script src="./js/inlanddiscount.js"></script>
 </body>
 </html>

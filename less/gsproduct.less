@@ -1,0 +1,170 @@
+@import "common";
+
+.m_container{
+  background-color: #f1f1f1;
+}
+/* 头部 */
+.m_header{
+  position: relative;
+  .back{
+    position: absolute;
+    left: 20rem/@base;
+    top: 16rem/@base;
+    font-size: 55rem/@base;
+    color: #fff;
+    font-weight: normal;
+  }
+  h3{
+    width: 80%;
+    line-height: 1.1rem;
+    height: 100%;
+    padding-left: 40%;
+    font-size: 34rem/@base;
+    color: #fff;
+  }
+  .app{
+    width: 20%;
+    position: absolute;
+   
+  }
+ }
+
+.hide{
+  display: none;
+}
+.rotate{
+   transform: rotate(-180deg);
+   transition:all 0.7s;
+   transform-origin: center;
+}
+.check{
+  position: absolute;
+  color: #ff2233;
+  right: 20rem/@base;
+  top: 20rem/@base;
+}
+/* 导航 */  
+.m_nav{
+  position: relative;
+  height: 73rem/@base;
+  width: 100%;
+  background-color: #fff;
+  border-top: 1rem/@base solid #ccc;
+  border-bottom: 1rem/@base solid #ccc;
+  margin-bottom: 10rem/@base;
+  >ul {
+     >li{
+        position: relative;
+        float: left;
+        height:73rem/@base;
+        padding: 18rem/@base 70rem/@base;
+        i{
+          position: absolute;
+          top:70rem/@base;
+          font-size: 14rem/@base;
+          margin-top: -50rem/@base;
+          margin-left: 10rem/@base;
+        }
+       span{
+         vertical-align: top;
+         font-size: 24rem/@base;
+       }
+        
+     }
+     .all{
+       border-right: 2rem/@base solid #ccc;
+     }
+     
+  }
+
+  .dropdown{
+    width: 100%;
+    position: absolute;
+    top: 74rem/@base;
+    background-color: #fff;
+    >ul{
+       li{
+         position: relative;
+          padding-left: 20rem/@base;
+          height: 65rem/@base;
+          line-height:  65rem/@base;
+          border-bottom: 2rem/@base solid #ccc;
+          a{
+            display: block;
+            height:  65rem/@base;
+            line-height:  65rem/@base;
+            font-size: 24rem/@base;
+          }
+       }
+    }
+  }
+}
+  /* 商品列表 */   
+.m_product{
+  overflow: hidden;
+  margin-bottom: 80rem/@base;       
+
+   li{
+     background-color: #fff;    
+     width: 46%;
+     margin-top: 10rem/@base;
+     margin-bottom: 10rem/@base;
+     border: none;
+     height: 420rem/@base;   
+     padding: 20rem/@base;
+     float: left;
+
+
+     a{
+       display: block;
+      img{
+        width: 250rem/@base;
+        height: 250rem/@base;
+        margin: 0 auto;
+      }
+
+       .desc{
+         h4{          
+           font-size: 22rem/@base;
+           height: 70rem/@base;
+           font-weight: normal;
+         }
+          .price{
+            color: #ff6c00;
+            font-size: 28rem/@base;
+            height: 60rem/@base;
+            margin-bottom: 18rem/@base;
+
+            .go{
+              margin: 0;
+              width:110rem/@base;
+              height: 48rem/@base;
+              background-color: orange;
+              padding:0  6rem/@base;
+              color: #fff;
+              font-size: 20rem/@base;
+              -webkit-appearance: none;
+              border: 1px solid orange;
+            }
+          }
+    
+       }
+     }
+   }
+
+
+   li:nth-child(2n){
+    float: left;
+    margin-left: 20rem/@base;     
+  }
+  li:nth-child(2n+1){
+    float: right;
+    margin-right: 20rem/@base;
+     
+ }
+}
+
+
+
+
+

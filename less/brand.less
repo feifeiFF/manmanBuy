@@ -1,0 +1,297 @@
+@import "common";
+
+.m_container{
+  background-color: #fff;
+ 
+/*  搜索框 */ 
+.m_search_box{
+  position: relative;
+  width:100%;
+  height: 1rem;
+  background-color: #fefefe;
+
+.ipt{ 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 12rem/@base 150rem/@base  12rem/@base 25rem/@base;
+
+  input{   
+    vertical-align: top;
+    border-radius: 50px;
+    width: 96%;
+    height: 100%;
+    text-indent: 1.5em;
+    font-size: 22rem/@base;
+    background-color: #f1f1f1;
+  }
+}
+
+.btn{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width:160rem/@base;
+  height: 1rem;
+  font-size: 26rem/@base;
+  padding: 13rem/@base 24rem/@base ;
+
+  input{
+    width: 100%;
+    height:100%;
+    border-radius: 50rem;
+    outline: none;
+    border: none;
+    background-color: #ff841d;
+    color: #fff;
+    outline-style: none;
+   -webkit-tap-highlight-color: rgba(255, 253, 253, 0);
+  }
+}
+
+}
+
+/*  路径导航 */ 
+.m_path_nav{
+  width: 100%;
+  border-top: 2rem/@base solid #ccc;
+  border-bottom: 2rem/@base solid #ccc;
+  width: 100%;
+  height: 67rem/@base;
+  background-image:linear-gradient(to top,#eeeeee,#ffffff);
+  padding-left: 20rem/@base;
+
+ a{
+   line-height: 67rem/@base;
+   font-size: 24rem/@base;
+ 
+ }
+ .btn{
+   width: 107rem/@base;
+   height: 50rem/@base;
+   padding-right: 20rem/@base;
+      
+   
+   button{
+     margin-top: 7rem/@base;
+     width: 100%;
+     height: 100%;
+     font-size: 24rem/@base;
+     border-radius: 10rem/@base;
+     background-image: linear-gradient(to bottom,#eeeeee,#ffffff);
+     background-color: transparent;
+   }
+ }
+
+  
+}
+
+/* 哪个牌子好 */
+.m_brand_good{
+  .good_box{
+    width: 100%;
+
+    li{
+      width: 100%;
+      height: 130rem/@base;
+      padding: 20rem/@base;
+      border-bottom: 1rem/@base solid #ccc;
+
+
+      a{
+        display: block;
+
+        .brank{
+          width: 10%;
+          height: 100%;
+          span{
+            display: block;
+            width: 36rem/@base;
+            height: 36rem/@base;
+            background-color:#999;;
+            text-align: center;
+            color: #fff;
+            line-height: 36rem/@base;
+           
+          }
+       }
+        .desc{
+          overflow: hidden;
+          width: 90%;
+          height: 100%;
+
+           h4{
+              font-size: 28rem/@base;
+              font-weight: 500;
+
+           }
+           p{
+            color: #999;
+            font-size: 18rem/@base;
+            margin-top: 10rem/@base;
+           }
+        }
+      }
+    }
+  }
+} 
+
+
+/* 销量排行 */ 
+.rank_title{
+  width: 100%;
+  border-bottom: 2rem/@base solid #ccc;
+  background: #f1f1f1;
+  font-size: 26rem/@base;
+  line-height: 65rem/@base;
+  height: 65rem/@base;
+  padding:0 15rem/@base;
+  color: #874604;
+}
+
+
+.m_brand_rank{
+  .rank_box{
+    width: 100%;
+
+    li{
+      width: 100%;
+      overflow: hidden;
+      height: 262rem/@base;
+      padding: 30rem/@base;
+      border-bottom: 1rem/@base solid #ccc;
+
+
+      a{
+        display: block;
+
+        .img_box{
+          width: 30%;
+          height: 100%;
+          padding:0 15rem/@base;
+          // margin-right: 20rem/@base;
+
+        }
+        .desc{
+          overflow: hidden;
+          height: 100%;
+
+           h4{
+              font-size: 28rem/@base;
+              font-weight: 500;
+
+           }
+           .price{
+             display: inline-block;
+             font-size: 34rem/@base;
+             margin: 50em/@base 0;
+           }
+           .star{
+             margin-top: 28rem/@base;
+             display: block;
+             height: 30rem/@base;
+             width: 145rem/@base;
+             background: url("../images/star.svg") repeat-x;
+             background-size: 30rem/@base 30rem/@base;
+
+           }
+           p{
+            color: #999;
+            font-size: 18rem/@base;
+            margin-top: 10rem/@base;
+           }
+        }
+      }
+    }
+  }
+}
+
+
+/*  最新评论 */
+.m_brank_comment{
+ 
+  .rank_box{
+    width: 100%;
+    li:nth-child(1){
+       border:none;
+    }
+    li{
+      width: 100%;     
+      padding: 20rem/@base;
+      border-top: 1rem/@base solid #ccc;
+   
+      a{
+        display: block;
+        height: 232rem/@base;
+        padding: 20rem/@base 0;
+
+        .img_box{
+          width: 30%;
+          height: 100%;
+          padding:0 15rem/@base;
+          margin-right: 20rem/@base;
+
+        }
+        .desc{
+          overflow: hidden;
+          height: 100%;
+
+           h4{
+            color: #999;
+            font-size: 28rem/@base;
+            margin-top: 10rem/@base;
+            font-weight: 500;
+           }
+        }
+      }
+
+      .com_content{   
+        margin-top: 30rem/@base;   
+        width: 100%;
+        border: 1rem/@base solid #ccc;
+        padding: 20rem/@base 15rem/@base;
+        background-color: #f1f2f1;
+        .com_title{
+          position: relative;
+        }
+        .star{
+          display: block;
+          height: 30rem/@base;
+          width: 145rem/@base;
+          background: url("../images/star.svg") repeat-x;
+          background-size: 30rem/@base 30rem/@base;
+
+        }
+        p{
+          padding-top:20rem/@base;
+          font-size: 26rem/@base;
+        }
+        .triangle{
+          position: absolute;
+          left: 64rem/@base;
+          top: -64rem/@base;          
+          border: 22rem/@base solid #ccc;
+          border-top-color: transparent; 
+          border-left-color: transparent; 
+          border-right-color: transparent; 
+
+
+          &::before{
+            content: "";
+            position: absolute;
+            top: -18rem/@base;
+            left: -20rem/@base;     
+            border: 20rem/@base solid #f1f1f1;
+            border-top-color: transparent; 
+            border-left-color: transparent; 
+            border-right-color: transparent; 
+          }
+        }
+      }
+
+
+    }
+  }
+}
+}
+

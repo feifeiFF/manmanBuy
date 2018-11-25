@@ -1,0 +1,73 @@
+@import "common";
+
+.m_container{
+  background-color: #fff;
+}
+/* 头部 */
+.m_header{
+  position: relative;
+  .back{
+    position: absolute;
+    left: 20rem/@base;
+    top: 16rem/@base;
+    font-size: 55rem/@base;
+    color: #fff;
+    font-weight: normal;
+  }
+  h3{
+    width: 80%;
+    line-height: 1.1rem;
+    height: 100%;
+    padding-left: 40%;
+    font-size: 34rem/@base;
+    color: #fff;
+  }
+  .app{
+    width: 20%;
+    position: absolute;
+   
+  }
+ }
+
+/* 商品列表 */   
+.m_product{
+  overflow: hidden;
+  margin-bottom: 80rem/@base;
+   li{
+     background-color: #fff;
+     width:49%;
+     height: 473rem/@base;
+     border-bottom: 2rem/@base solid #ccc;
+     padding: 20rem/@base;
+     float: left;
+    &:nth-child(2n){
+      border-left: 2rem/@base solid  #ccc; 
+    }
+
+     a{
+       display: block;
+      img{
+        width: 250rem/@base;
+        height: 250rem/@base;
+        margin: 0 auto;
+      }
+
+       .desc{
+         padding: 0 20rem/@base;
+         h4{          
+           font-size: 26rem/@base;
+           height: 75rem/@base;
+         }
+          .price{
+            color: #ff6c00;
+            font-size: 24rem/@base;
+            height: 32rem/@base;
+            margin-bottom: 18rem/@base;
+          }
+          p:last-child{
+            color: #a1a1a1;
+          }
+       }
+     }
+   }
+}

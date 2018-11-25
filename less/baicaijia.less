@@ -1,0 +1,162 @@
+@import "common";
+.m_container{
+
+  /* 头部 */
+.m_header{
+  background-color: #f4483e;
+  position: relative;
+  .back{
+    position: absolute;
+    left: 20rem/@base;
+    top: 12rem/@base;
+    font-size: 55rem/@base;
+    color: #fff;
+    font-weight: normal;
+  }
+  h3{
+    width: 80%;
+    line-height: 1rem;
+    height: 100%;
+    padding-left: 30%;
+    font-size: 34rem/@base;
+    color: #fff;
+  }
+  .app{
+    width: 20%; 
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 90rem/@base;
+   
+  }
+ }
+
+/* 白菜价导航 */
+.m_bcj_nav{
+  width: 100%;
+  overflow: hidden;
+  height: 82rem/@base;
+  margin-top: 1rem/@base;
+  margin-bottom: 5rem/@base;
+  background-color: #fff;
+
+  ul{
+    height: 100%;
+    li{
+       float: left;
+       line-height: 100%;
+       height: 100%;
+       margin: 0 16rem/@base;
+
+       &.now{
+        border-bottom: 3px solid #f4483e;
+      } 
+       a{       
+        height: 82rem/@base;
+        line-height: 82rem/@base;
+        display: block;
+     
+        
+       }
+    }
+  }
+}  
+
+
+
+/* 白菜价内容  */ 
+.m_bcj_content{
+  ul{
+    li{
+      height: 278rem/@base;
+      padding: 20rem/@base 10rem/@base;
+      color: #3F3F3F;
+      margin-bottom: 6rem/@base;
+      background-color: #fff;
+  
+      .imgbox{
+        width:40%;
+        height: 222rem/@base;
+      }
+
+      .desc{
+        float: left;
+        overflow: hidden;
+        height: 100%;
+        width: 60%;
+
+        .title{
+          height: 62rem/@base;
+           margin-bottom: 10rem/@base;
+        }
+        .price{
+          margin-bottom: 30rem/@base;
+          padding-left: 20rem/@base;
+          font-size: 30rem/@base;
+          color: #fc353a;
+          del{
+            color: #a8a8a8;
+            font-size: 20rem/@base;
+            padding-left: 30rem/@base;  
+          }
+        }
+        .oldPrice{
+          color:#a8a8a8;
+          font-size: 18rem/@base;
+          padding-left: 20rem/@base;
+          text-decoration: line-through;
+        }
+        .bar{
+          font-size: 14rem/@base;
+          text-align: center;
+          border-radius: 20rem/@base;
+          border: 2rem/@base solid #fc353a;
+          background-color: #FFB3B3;
+          margin-bottom: 25rem/@base;
+          width: 55%;
+          position: relative;
+
+          b{
+           position: absolute;
+           right: -66%;
+           top: -10rem/@base;
+           font-weight: 500;
+           margin-bottom: 25rem/@base;
+           font-size: 24rem/@base;
+           color: #fc353a;
+
+          }
+        }
+
+        
+      .quanLink{
+        width: 210rem/@base;
+        height: 47rem/@base;
+        line-height: 46rem/@base;
+        text-align: center;
+        border: 1rem/@base dashed #fc353a;
+      }
+      .shopLink{
+     
+
+        a{
+          width: 124rem/@base;
+          height: 50rem/@base;
+          background-color: #FF5150;
+          color: #fff;
+          line-height: 50rem/@base;
+          text-align: center; 
+          border-radius: 10rem/@base;
+          padding: 5rem/@base 10rem/@base;
+        }
+      }
+      
+      }
+   
+   
+
+    }
+  }
+}
+}

@@ -1,6 +1,5 @@
 // 此方法专门用于解析获取地址栏参数
 function getSearch ( k ) {
-
   var str = location.search;  // "?key=%E5%8C%A1%E5%A8%81&age=18&desc=%E5%B8%85
   str = decodeURI( str );    // "?key=匡威&age=18&desc=帅"
   str = str.slice( 1 );      // "key=匡威&age=18&desc=帅"
@@ -19,6 +18,7 @@ function getSearch ( k ) {
 }
 
 
+
 $(function(){
 
 
@@ -32,5 +32,19 @@ $(function(){
   $(".back").click(function(){
      window.history.back();
   })
+ 
 
+  // 3--点击回到顶部
+  $(".goTop").click(function(){
+    $("html,body").finish().animate({"scrollTop":"0px"},200);
+  })
+
+  $(window).scroll(function(){   
+    if($(window).scrollTop()<$(window).height()){
+      $(".goTop").fadeOut(2000);
+     }else{
+      $(".goTop").fadeIn(2000);   
+      
+     }
+  })
 });

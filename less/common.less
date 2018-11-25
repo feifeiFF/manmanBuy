@@ -12,6 +12,9 @@ html,body{
 a{
   -webkit-tap-highlight-color: transparent;
 }
+i,em{
+  font-style: normal;
+}
 .m_container{
   background-color: #f1f1f1;
   margin: 0 auto;
@@ -26,7 +29,6 @@ a{
   /* 头部 */ 
   .m_header{
   width: 100%;
-  max-height: 90px;
   height: 89rem/@base;
   background-color: #ea8224;
   
@@ -123,3 +125,31 @@ a{
  }
 
 }
+
+/*去顶部*/ 
+
+.goTop{
+  width: 50rem/@base;
+  height: 50rem/@base;
+  background-color: rgba(173, 173, 173, 0.8);
+  z-index: 9999;   
+  position: fixed;
+  bottom: 20rem/@base;
+  right: 20rem/@base;
+  
+  border-radius: 50%; 
+
+  i{
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 100%;
+    text-align: center;
+    color:#fff;
+    padding-top: 3rem/@base;
+    font-size:40rem/@base;
+    font-weight:normal;
+   
+  }
+}
+

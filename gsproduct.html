@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./lib/flexible/flexible.js"></script>
+   <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+   <link rel="stylesheet" href="./css/gsproduct.css">
+  <title>manmanBuy</title>
+</head>
+<body>
+  <div class="m_container">
+   <!-- 头部  -->
+  <div class="m_header clearfix">
+      <i class="fa fa-angle-left back"></i>
+      <h3 class="fl">凑单品</h3>
+      <div class="app">
+        <a href="#"><img src="./images/header_app.png" alt=""></a>
+      </div>
+ </div>
+<!-- 小导航 -->
+<div class="m_nav">
+   <ul>
+     <li class="hd"><span>京东</span><i class="fa fa-caret-up "></i></li>
+     <li class="hb"><span>华北</span><i class="fa fa-caret-up"></i></li>
+     <li class="all"><span>全部价格</span><i class="fa fa-caret-up"></i></li>
+   </ul>
+   <div class="dropdown">
+      <ul class="drop_hd hide">
+        <li><a href="#"> 滑动</a></li>
+        <li><a href="#">滑动</a></li>
+        <li><a href="#">滑动</a></li>
+      </ul> 
+      <ul class="drop_hb hide">
+        <li><a href="#">华北</a></li>
+        <li><a href="#">华北</a></li>
+        <li><a href="#">华北</a></li>
+      </ul> 
+      <ul class="drop_all hide">
+        <li><a href="#">全部价格</a></li>     
+      </ul> 
+   </div>
+</div>
+
+ <!-- 商品列表 -->
+ <div class="m_product">
+    <ul>
+      <li>
+        <a href="">
+          <img src="./images/product.jpg" alt="">
+          <div class="desc">
+              <h4  class="txt-cut">西域美农新疆特产五星和田红枣250g*2</h4>
+              <p class="price">19.8元(5件99元) <button class="fr go">去购买</button></p>
+          </div>
+        </a>
+      </li>    
+    </ul>
+ </div>
+  <!-- 尾部 -->
+   <div class="m_footer">
+      <div class="top clearfix">
+        <a href="#" class="fl">登录</a>
+        <a href="#" class="fl register">注册</a>
+        <a href="javascript:void(0)" class="fl toTop">返回顶部</a>
+      </div>
+      <div class="bottom">
+          <p class="downApp clearfix ">
+              <a href="#" class="colRed">手机APP下载 &nbsp;</a>
+              <a href="#">&nbsp;慢慢买手机版&nbsp;</a>
+              <a href="#" class="col666">&nbsp;--掌上比价平台</a>
+          </p>       
+          <p class="col666 link">m.manmanbuy.com</p>
+   </div>  
+   </div>
+
+<!-- 模版 商品列表 -->
+<script type="text/template" id="productTmp">
+  {{ each result v i }} 
+  <li>
+      <a href="https://item.m.jd.com/ware/view.action?wareId=1274360">
+        <img src="{{ v.productImg }}" alt="" srcset="">
+        <div class="desc">
+            <h4 class="txt-cut">{{ v.productName }}</h4>
+            <p class="price txt-cut"><span>{{ v.productPrice}}</span><button class="fr go">去购买</button></p>          
+        </div>
+      </a>
+    </li>    
+
+  {{ /each }}
+</script>
+
+<!-- 店铺 模版 -->
+<script type="text/html" id="shopTmp">
+{{ each result v i }}
+  <li data-shopId="{{ v.shopId}}"><a href="#"> {{v.shopName}}<i  class="fa fa-check  check hide" ></i></a></li> 
+{{ /each }}
+</script>
+<!-- 地区 模版 -->
+<script type="text/html" id="areaTmp">
+{{ each result v i }}
+  <li data-areaId="{{ v.areaId}}" ><a href="#"> {{v.areaName}}</a><i  class="fa fa-check  check hide" ></i></li> 
+{{ /each }}
+</script>
+
+
+
+ </div>
+ <script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/inlanddiscount.js"></script>
+<script src="./js/gsproduct.js"></script>
+</body>
+</html>

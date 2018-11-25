@@ -1,5 +1,6 @@
 $(function(){
-  var productid =getSearch("productId");
+
+  var productid = getSearch("productid");
   // 1-- 国内折扣商品详情
   $.ajax({
     type: "get",
@@ -13,5 +14,5 @@ $(function(){
   });
 
 
-  // 2--
+ 
 })

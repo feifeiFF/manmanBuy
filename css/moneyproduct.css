@@ -224,6 +224,26 @@ img {
   width: 100%;
   height: 100%;
 }
+/* 单行省略 */
+.txt-cut {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.txt-cut-2 {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.txt-cut-3 {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
 html,
 body {
   width: 100%;
@@ -232,6 +252,10 @@ body {
 }
 a {
   -webkit-tap-highlight-color: transparent;
+}
+i,
+em {
+  font-style: normal;
 }
 .m_container {
   background-color: #f1f1f1;
@@ -247,7 +271,6 @@ a {
 }
 .m_container .m_header {
   width: 100%;
-  max-height: 90px;
   height: 1.18666667rem;
   background-color: #ea8224;
 }
@@ -319,6 +342,28 @@ a {
 .m_container .m_footer .bottom .link {
   font-size: 0.26666667rem;
 }
+/*去顶部*/
+.goTop {
+  width: 0.66666667rem;
+  height: 0.66666667rem;
+  background-color: rgba(173, 173, 173, 0.8);
+  z-index: 9999;
+  position: fixed;
+  bottom: 0.26666667rem;
+  right: 0.26666667rem;
+  border-radius: 50%;
+}
+.goTop i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 100%;
+  text-align: center;
+  color: #fff;
+  padding-top: 0.04rem;
+  font-size: 0.53333333rem;
+  font-weight: normal;
+}
 .m_container {
   background-color: #fff;
 }
@@ -351,8 +396,7 @@ a {
   padding: 0.4rem 0.2rem;
   /* 某城市是否有货 */
   /* 去购买 */
-  /* 发表 */
-  /* 最新评论 */
+  /*  发表评论 最新评论*/
 }
 .m_moneyproduct h3 {
   font-size: 0.42666667rem;
@@ -379,14 +423,14 @@ a {
 }
 .m_moneyproduct .city {
   margin: 0.4rem 33%;
-  border: 1px solid #ccc;
-  box-shadow: 0.02666667rem 0.04rem 0.02666667rem #cccccc;
+  box-shadow: 0.02666667rem 0.13333333rem 0.66666667rem #cccccc;
   padding: 0 0.13333333rem;
 }
 .m_moneyproduct .city strong {
   float: right;
   color: #f27b04;
   width: 50%;
+  display: block;
 }
 .m_moneyproduct .city li {
   overflow: hidden;
@@ -395,7 +439,7 @@ a {
 .m_moneyproduct .city a {
   display: block;
   float: left;
-  width: 50%;
+  width: 100%;
   height: 0.53333333rem;
   text-align: center;
   line-height: 0.53333333rem;
@@ -416,55 +460,63 @@ a {
   line-height: 0.66666667rem;
   margin-bottom: 0.4rem;
 }
-.m_moneyproduct h4 {
+.m_moneyproduct .cu-content-pl .tit {
   height: 1.06666667rem;
   padding: 0.26666667rem;
   font-size: 0.37333333rem;
   font-weight: normal;
   line-height: 0.66666667rem;
 }
-.m_moneyproduct .comment {
-  position: relative;
-  width: 100%;
-}
-.m_moneyproduct .comment textarea {
+.m_moneyproduct .cu-content-pl #ctl00_ContentBody_txt_nr {
   width: 100%;
   padding: 0.2rem;
   height: 2.76rem;
   border: 0.02666667rem solid #cccccc;
 }
-.m_moneyproduct .comment button {
+.m_moneyproduct .cu-content-pl .ctrl {
+  width: 2.38666667rem;
+  position: relative;
+}
+.m_moneyproduct .cu-content-pl #ctl00_ContentBody_Button1 {
   position: absolute;
-  right: 0.04rem;
+  left: 7.2rem;
   bottom: 0.10666667rem;
   width: 2.38666667rem;
   height: 0.92rem;
   color: #fff;
   background-color: #ff841d;
   border: 0.01333333rem solid #ff841d;
-  -webkit-appearance: button;
 }
-.m_moneyproduct .new_common .user_img {
+.m_moneyproduct .cu-content-pl .list .ui-border-b {
+  overflow: hidden;
+}
+.m_moneyproduct .cu-content-pl .list .userimg {
+  float: left;
   width: 17%;
   padding-right: 0.4rem;
   padding-top: 0.2rem;
 }
-.m_moneyproduct .new_common .user_img img {
+.m_moneyproduct .cu-content-pl .list .userimg img {
   width: 1rem;
   height: 1rem;
   margin: 0 auto;
+  border-radius: 50%;
 }
-.m_moneyproduct .new_common .user_info {
-  width: 82%;
-}
-.m_moneyproduct .new_common .user_info p {
-  width: 100%;
+.m_moneyproduct .cu-content-pl .list .con {
   font-size: 0.32rem;
   line-height: 0.66666667rem;
+  width: 82%;
+  float: right;
 }
-.m_moneyproduct .new_common .user_info .uname {
+.m_moneyproduct .cu-content-pl .list .con .username {
   color: #5997c0;
+  float: left;
 }
-.m_moneyproduct .new_common .user_info .time {
+.m_moneyproduct .cu-content-pl .list .con .time {
   color: #999;
+  float: right;
+}
+.m_moneyproduct .cu-content-pl .list .con .content {
+  width: 0.66666667rem;
+  height: 0.66666667rem;
 }

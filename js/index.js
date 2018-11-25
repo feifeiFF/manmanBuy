@@ -24,6 +24,7 @@ $(function(){
        success:function(info){
          console.log(info);
          $(".rmd_content ul").html(template("recommaendTmp",info));
+          
        }
     })
   }
@@ -32,6 +33,9 @@ $(function(){
 $(".m_nav .nav_box").on("click",".more",function(){
     $(".m_nav ul").toggleClass("hig");
 })
+
+
+// 4--点击商品列表，去详情页
 
    
 

@@ -1,0 +1,67 @@
+@import "common";
+.m_container{
+  background-color: #fff; 
+    /* 头部 */
+    .m_header{
+      background-color:#f4483e;
+      position: relative;
+      .back{
+        position: absolute;
+        left: 20rem/@base;
+        top: 12rem/@base;
+        font-size: 55rem/@base;
+        color: #fff;
+        font-weight: normal;
+      }
+      h3{
+        width: 80%;
+        line-height: 1rem;
+        height: 100%;
+        padding-left: 42%;
+        font-size: 34rem/@base;
+        color: #fff;
+      }
+      .app{
+        width: 20%; 
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 90rem/@base;
+       
+      }
+     }
+
+
+    /*  商品 */  
+    
+    .m_coupon{   
+     
+      width: 100%;
+      margin-top: 30rem/@base;   
+      li{
+        float: left;
+        width: 33.3%;
+        height: 140rem/@base;
+          
+
+        &:nth-child(2n+n){
+          margin: 0 5%;
+        }
+        a{
+          font-size: 22rem/@base;
+          display: block;
+          width: 90rem/@base;
+          height: 80rem/@base;
+          margin: 0 auto;
+
+          p{
+            text-align: center;
+            line-height: 30rem/@base;
+          }
+        }
+      }
+    }
+
+   
+}

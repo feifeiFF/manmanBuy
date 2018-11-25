@@ -366,97 +366,57 @@ em {
 }
 .m_container {
   background-color: #fff;
+  /* 头部 */
+  /*  商品 */
 }
-/*  搜索框 */
-.m_search_box {
+.m_container .m_header {
+  background-color: #f4483e;
   position: relative;
-  width: 100%;
-  height: 1rem;
-  background-color: #fefefe;
 }
-.m_search_box .ipt {
-  width: 100%;
-  height: 100%;
+.m_container .m_header .back {
   position: absolute;
-  padding: 0.16rem 2rem 0.16rem 0.33333333rem;
-}
-.m_search_box .ipt input {
-  vertical-align: top;
-  border-radius: 50px;
-  width: 96%;
-  height: 100%;
-  text-indent: 1.5em;
-  font-size: 0.29333333rem;
-  background-color: #f1f1f1;
-}
-.m_search_box .btn {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 2.13333333rem;
-  height: 1rem;
-  font-size: 0.34666667rem;
-  padding: 0.17333333rem 0.32rem;
-}
-.m_search_box .btn input {
-  width: 100%;
-  height: 100%;
-  border-radius: 50rem;
-  outline: none;
-  border: none;
-  background-color: #ff841d;
+  left: 0.26666667rem;
+  top: 0.16rem;
+  font-size: 0.73333333rem;
   color: #fff;
-  outline-style: none;
-  -webkit-tap-highlight-color: rgba(255, 253, 253, 0);
+  font-weight: normal;
 }
-/* 搜索列表 */
-.hide {
-  display: none;
+.m_container .m_header h3 {
+  width: 80%;
+  line-height: 1rem;
+  height: 100%;
+  padding-left: 42%;
+  font-size: 0.45333333rem;
+  color: #fff;
 }
-.m_category {
-  overflow: hidden;
-  border-radius: 0.2rem;
+.m_container .m_header .app {
+  width: 20%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 1.2rem;
+}
+.m_container .m_coupon {
   width: 100%;
-  background-color: #fff;
-  margin-bottom: 0.48rem;
-  border-top: 0.02666667rem solid #cccccc;
-  border-bottom: 0.02666667rem solid #cccccc;
+  margin-top: 0.4rem;
 }
-.m_category .cate_title .title_item {
-  background-color: #efefef;
-  border-bottom: 1px solid #ccc;
-}
-.m_category .cate_title .title_item .title {
-  display: block;
-  width: 100%;
-  font-size: 0.4rem;
-  padding-left: 0.26666667rem;
-  font-weight: 700;
-  line-height: 0.86666667rem;
-  color: #333;
-  -webkit-tap-highlight-color: transparent;
-}
-.m_category .cate_title .title_item .cate_list {
-  top: 0.86666667rem;
-  padding: 0 0.4rem;
-  padding: 0;
-  margin: 0;
-}
-.m_category .cate_title .title_item .cate_list li {
+.m_container .m_coupon li {
   float: left;
   width: 33.3%;
-  text-align: center;
-  height: 0.86666667rem;
-  border-bottom: 1px solid #ccc;
-  border-right: 1px solid #ccc;
+  height: 1.86666667rem;
 }
-.m_category .cate_title .title_item .cate_list li a {
+.m_container .m_coupon li:nth-child(2n+n) {
+  margin: 0 5%;
+}
+.m_container .m_coupon li a {
+  font-size: 0.29333333rem;
   display: block;
-  background-color: #f9f9f9;
-  line-height: 0.86666667rem;
-  font-size: 0.34666667rem;
-  -webkit-tap-highlight-color: transparent;
+  width: 1.2rem;
+  height: 1.06666667rem;
+  margin: 0 auto;
 }
-.m_category .cate_title .title_item .cate_list li:nth-child(3n) {
-  border-right: none;
+.m_container .m_coupon li a p {
+  text-align: center;
+  line-height: 0.4rem;
 }

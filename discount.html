@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="./lib/flexible/flexible.js"></script>
    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
-   <link rel="stylesheet" href="./css/moneyproduct.css">
+   <link rel="stylesheet" href="./css/discount.css">
   <title>manmanBuy</title>
 </head>
 <body>
@@ -42,56 +42,53 @@
    </div>
 
    <!--  1--国内折扣详情页 -->
-   <script type="text/html" id="detailsTmp">
-    {{ each result v i }}
-    <h3>{{ v.productName }}</h3>
-    <p class="subHead">
-      <span class="form">{{ v.productFrom }}</span>
-      <span class="time">{{ v.productTime }}</span>
-      <span class="who"> {{v.productTips}}</span>
-    </p>
-    <div class="content">
-      <div  class="fr rigSmall">        
-        {{@v.productImgSm}}
-      </div>    
-       <p>
-         {{ v.productInfo1 }}
-       </p>
-       <p>
-         {{ v.productInfo2 }}
-       </p>
-       {{ if v.productImgLg !=  "" }}
-      <div class="class="botBig>
-        {{@v.productImgLg }}
-      </div>
-      {{ else}}
-      <div class="class="botBig>
-          {{@v.productImg2  }}
-        </div>
-      {{ /if }}
-     
-    </div>
-    {{ if v.productCity !== undefined||"" }}
-    <div class="city">
-        {{@ v.productCity}}
-    </div>
-    {{ else }}
-     <p>暂无城市信息</p>
-    {{ /if }}
-    <div class="goShop">
-      <div class="go">前往购买</div>
-       <img src="./images/mmbweixin2.png" alt="">
-    </div>
-    <div class="new_common">   
-       {{@v.productComment}}
-    </div>
-  {{ /each }}
+   <script type="text/html" id="discountTmp">
+   {{ each result v i }}
+   <h3>{{ v.productName }}</h3>
+   <p class="subHead">
+     <span class="form">{{ v.productFrom }}</span>
+     <span class="time">{{ v.productTime }}</span>
+     <span class="who">{{v.productTips}}</span>
+   </p>
+   <div class="content">
+     <div  class="fr rigSmall">
+       {{@v.productImg}}
+     </div>    
+      <p>
+        {{ v.productInfo}}
+      </p>
+      <p>
+        {{ v.productInfo2 }}
+      </p>
+     <div class="botBig">
+       {{@v.productImg}}
+     </div>
+    
+   </div>
+   {{ if v.productCity != undefined }}
+   <div class="city">    
+       {{@ v.productCity}}   
+   </div>
+   {{ /if }}
+   <div class="goShop">
+     <div class="go">前往购买</div>
+      <img src="./images/mmbweixin2.png" alt="">
+   </div>
+   <div class="new_common">   
+      {{@v.productComment}}
+   </div>
+
+
+
+   {{ /each }}
+
+
   </script>
    
  </div>
  <script src="./lib/jquery/jquery.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/moneyproduct.js"> </script>
+<script src="./js/discount.js"></script>
 </body>
 </html>

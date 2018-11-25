@@ -60,7 +60,7 @@
 
  <!--  更多 -->
  <div class="m_more">
-     <a href="#">更多优惠信息&gt;&gt;</a>
+     <a href="moneyctrl.html">更多优惠信息&gt;&gt;</a>
  </div>
 
  <!-- 品牌排行 -->
@@ -75,7 +75,7 @@
     <div class="top clearfix">
       <a href="#" class="fl">登录</a>
       <a href="#" class="fl register">注册</a>
-      <a href="#" class="fl">返回顶部</a>
+      <a href="#" class="fl toTop">返回顶部</a>
     </div>
     <div class="bottom">
         <p class="downApp clearfix ">
@@ -85,16 +85,17 @@
         </p>       
         <p class="col666 link">m.manmanbuy.com</p>
  </div>
-    
-
  </div>
+
+ <!--去顶部  -->
+ <div class="goTop hide" style="display: block;"><i class="fa fa-arrow-up "></i></div>
  
  </div>
 
   <!-- 1--导航部分模版   -->
   <script type="text/html" id="navTmp">
     {{  each result v  i }}    
-    <li><a href="{{ v.titlehref}}" data-id="{{ v.indexmenuId }}" class="{{ v.indexmenuId ==7?'more':''}}">{{@ v.img }}<p>{{ v.name }}</p></a></li>  
+    <li class="b_red"><a href="{{ v.titlehref}}" data-id="{{ v.indexmenuId }}" class="{{ v.indexmenuId ==7?'more':''}}">{{@ v.img }}<p>{{ v.name }}</p></a></li>  
     {{ /each }}
   </script>
   
@@ -102,7 +103,7 @@
   <script type="text/html" id="recommaendTmp">
     {{ each result v i }}
      <li>     
-        <a href="#"  productId="{{ v.productId }}">
+        <a href="moneyproduct.html?productid={{v.productId}}">
           <div class="img ">{{@ v.productImgSm}}</div>
           <div class="desc">
             <p class="first">{{ v.productName }} <span class="org">{{ v.productPinkage }}</span></p>
@@ -112,8 +113,9 @@
        </li>
     {{ /each }} 
   </script>
-<script src="./lib/jquery/jquery.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./js/common.js"></script>
 <script src="./js/index.js"></script>
 </body>
 </html>

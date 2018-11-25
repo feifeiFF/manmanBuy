@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./lib/flexible/flexible.js"></script>
+   <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+   <link rel="stylesheet" href="./css/brandTitle.css">
+  <title>manmanBuy</title>
+</head>
+<body>
+  <div class="m_container">
+   <!-- 头部  -->
+  <div class="m_header clearfix">
+      <div class="logo">
+        <a href="index.html"><img src="./images/header_logo.png" alt=""></a>
+      </div>
+      <div class="app">
+        <a href="#"><img src="./images/header_app.png" alt=""></a>
+      </div>
+ </div>
+
+  <!-- 搜索框 -->
+  <div class="m_search_box">
+      <div class="ipt fl">
+         <input type="text" placeholder="请输入您想比价的商品">
+      </div>
+      <div class="btn fr">
+       <input type="button" value="搜索">
+      </div>
+  </div>
+
+<!-- 路径导航 -->
+<div class="m_path_nav">
+    <a href="index.html">首页</a>
+    <span>&gt;</span>
+    <a href="brandTitle.html">全部分类</a>
+    <span>&gt;</span>
+    <a href="brand.html?brandtitleid=0" class="now"></a>
+</div>
+
+
+
+
+<!-- 品牌分类  -->
+<div class="m_brandTitle">
+    <!-- 热门品牌排行 -->
+    <div class="m_hot_brand">
+      热门品牌排行
+    </div>
+   <ul class="brand_box">
+     <li class="brand_list"><a href="">品牌排行<i class="fa fa-angle-right fr"></i></a></li>
+     <li class="brand_list"><a href="">品牌排行<i class="fa fa-angle-right fr"></i></a></li>
+     <li class="brand_list"><a href="">品牌排行<i class="fa fa-angle-right fr"></i></a></li>
+     <li class="brand_list"><a href="">品牌排行<i class="fa fa-angle-right fr"></i></a></li>
+     <li class="brand_list"><a href="">品牌排行<i class="fa fa-angle-right fr"></i></a></li>
+     <li class="brand_list"><a href="">品牌排行<i class="fa fa-angle-right fr"></i></a></li>
+   </ul>
+</div>
+
+
+<!-- 尾部 -->
+<div class="m_footer">
+  <div class="top clearfix">
+    <a href="#" class="fl">登录</a>
+    <a href="#" class="fl register">注册</a>
+    <a href="#" class="fl">返回顶部</a>
+  </div>
+  <div class="bottom">
+      <p class="downApp clearfix ">
+          <a href="#" class="colRed">手机APP下载 &nbsp;</a>
+          <a href="#">&nbsp;慢慢买手机版&nbsp;</a>
+          <a href="#" class="col666">&nbsp;--掌上比价平台</a>
+      </p>       
+      <p class="col666 link">m.manmanbuy.com</p>
+</div>  
+</div>
+
+   <!-- 回到顶部 -->
+   <div class="goTop hide"><i class="fa fa-arrow-up "></i></div> 
+
+   
+<!-- 模版 大标题 -->
+<script type="text/html" id="brandTitleTmp">
+ {{ each result v i }}   
+ <li class="brand_list" >
+   <a href="brand.html?brandtitleid={{ v.brandTitleId}}&brandTitle={{ v.brandTitle}}"  data-categoryId="{{ v.categoryId }}">
+     {{ v.brandTitle }}
+  <i class="fa fa-angle-right fr"></i></a></li>
+ {{ /each }}  
+</script>
+ </div>
+ <script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/brandTitle.js"></script>
+</body>
+</html>

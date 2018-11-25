@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./lib/flexible/flexible.js"></script>
+   <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+   <link rel="stylesheet" href="./css/baicaijia.css">
+  <title>manmanBuy</title>
+</head>
+<body>
+  <div class="m_container">
+   <!-- 头部  -->
+  <div class="m_header clearfix">
+      <i class="fa fa-angle-left back"></i>
+      <h3 class="fl">白菜价-淘宝内部券</h3>
+      <div class="app">
+        <a href="#"><img src="./images/header_app.png" alt=""></a>
+      </div>
+ </div>
+
+ <!-- 区域滚动 导航 -->
+ <div class="m_bcj_nav">
+    <ul class="clearfix">
+      <li><a href="" class="now">白菜价</a></li>
+       </ul>
+ </div>
+
+ <!-- 白菜价商品  -->
+ <div class="m_bcj_content">
+     <ul>
+       <li>
+         <a href="">
+          <div class="imgbox fl">
+             <img src="./images/product.jpg" alt="">
+          </div>
+        </a>
+        <div class="desc fl">
+           <a href="javascript:void(0)">
+              <div class="title"><strong>【包邮】</strong>双十一红包 今日开启</div>
+              <div class="price col">券后￥100 <span class="oldPrice">￥200</span></div>
+           </a>
+           <a href="javascript:void(0); " class="clearfix">
+              <div class="bar fl">%0 </div>
+              <span class="barTip fl col">已领28张</span>
+           </a>
+            <div class="quanLink fl">点此领18元优惠券</div>
+            <div class="shopLink fr">下单链接</div>
+        </div>
+      </li>
+
+
+    
+      
+     </ul>
+ </div>
+
+
+
+  <!-- 尾部 -->
+   <div class="m_footer">
+      <div class="top clearfix">
+        <a href="#" class="fl">登录</a>
+        <a href="#" class="fl register">注册</a>
+        <a href="javascript:void(0)" class="fl toTop">返回顶部</a>
+      </div>
+      <div class="bottom">
+          <p class="downApp clearfix ">
+              <a href="#" class="colRed">手机APP下载 &nbsp;</a>
+              <a href="#">&nbsp;慢慢买手机版&nbsp;</a>
+              <a href="#" class="col666">&nbsp;--掌上比价平台</a>
+          </p>       
+          <p class="col666 link">m.manmanbuy.com</p>
+   </div>  
+   </div>
+
+    <!-- 1-- 区域滚动  -->
+    <script type="text/html" id="navTmp">
+    {{ each result v  i }}    
+    <li class="{{ i==0?'now':''}}"><a href="javascript:void(0);" data-titleid="{{ v.titleId}}">{{ v.title }}</a></li>     
+    {{ /each }}
+    
+    </script>
+
+
+   <!--  2--国内折扣详情页 -->
+   <script type="text/html" id="detailsTmp">
+    {{ each result v i }}
+    <li>
+        <a href="">
+         <div class="imgbox fl">
+           {{@v.productImg}}
+         </div>
+       </a>
+       <div class="desc fl">
+          <a href="javascript:void(0)">
+             <div class="title"> {{@v.productName}}</div>
+             <div class="price"> {{@v.productPrice}}</div>
+          </a>
+          <a href="javascript:void(0); " class="clearfix ">
+             {{@v.productCouponRemain}} 
+          </a>
+           <div class="quanLink fl">{{@v.productCoupon}}</div>
+           <div class="shopLink fr">{{@v.productHref}}</div>
+       </div>
+     </li>
+   {{ /each }}
+  </script>
+   
+ </div>
+ <script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/IScroll/iscroll.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/baicaijia.js"></script>
+</body>
+</html>
