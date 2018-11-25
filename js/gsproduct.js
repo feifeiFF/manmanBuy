@@ -69,7 +69,7 @@ $(function(){
       $(this).find("i").removeClass("hide");
       $(this).siblings().find("i").addClass("hide");
       console.log($shopId,$areaId);
-      render($shopId,$areaId)
+      render($shopId,$areaId);
     })
 
   function render($shopId,$areaId){
