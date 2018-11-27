@@ -1,5 +1,9 @@
 @import "common";
 
+.hide{
+  display: none;
+}
+
 /* 头部 */
 .m_header{
  position: relative;
@@ -83,12 +87,24 @@
   
   
   .currentPage{
+    position: relative;
      
     button{
       -webkit-appearance: none;
       background-color: #fff;
       border: 2rem/@base solid #ccc;
     }
+
+    .dropUp{
+      opacity: .8;
+      button{      
+        height: 50rem/@base;
+        border: 1px solid #ccc;        
+      }
+      position: absolute;
+      bottom: 60rem/@base;
+    }
+    
   }
 
   button{

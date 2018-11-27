@@ -20,14 +20,13 @@ function getSearch ( k ) {
 
 
 $(function(){
-
-
   // 1--点击回到顶部，回到顶部
   $(".toTop").click(function(){
     //  加入 finish 防止多次点出现动画 bug 
      $("html,body").finish().animate({"scrollTop":"0px"},900);
   })
 
+  
   // 2--点击回退按钮回退到上一浏览页面
   $(".back").click(function(){
      window.history.back();

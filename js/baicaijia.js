@@ -5,17 +5,13 @@ $(function(){
   //  1-- 导航
   render();
   function render(){
-    $.ajax({
-      type: "get",
-      url: "http://127.0.0.1:9090/api/getbaicaijiatitle",
-      dataType: "json",
-      success: function (info) {
-         console.log(info);
-         $(".m_bcj_nav ul").html(template("navTmp",info));
-          iscroll();     
-      }
-    });
-  
+     new AjaxRequest({
+       url:"getbaicaijiatitle",
+       callback:function(info){
+        $(".m_bcj_nav ul").html(template("navTmp",info));
+        iscroll();     
+       }
+     });
   }
 
    function iscroll(){
@@ -43,23 +39,20 @@ $(function(){
            $(this).addClass("now").siblings().removeClass("now");
            id=$(this).find("a").data("titleid");       
            renderProduct(id);
- 
-
       });    
    }
 
-   function renderProduct(id){          
-    $.ajax({
-      url:"http://127.0.0.1:9090/api/getbaicaijiaproduct",
-      data:{
-        titleid:id
-      },
-      dataType:"json",
-      type:"get",
-      success:function(info){
-         console.log(info);
+   function renderProduct(id){      
+     new AjaxRequest({
+        url:"getbaicaijiaproduct",
+        param:{ 
+          titleid:id
+        },
+        callback:function(info){
+          console.log(info);
          $(".m_bcj_content ul").html(template("detailsTmp",info));
-      }
-   })
+        }
+     });   
+
     }
 });

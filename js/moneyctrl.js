@@ -10,31 +10,33 @@ $(function(){
   //  1 --渲染商品列表
   render(currentPage);
   function render(currentPage){
-    $.ajax({
-      url:"http://127.0.0.1:9090/api/getmoneyctrl",
-      dataType:'json',
-      data:{
-       pageid:currentPage
-      },
-      success:function(info){
-       console.log(info)
+  new AjaxRequest({
+    url:'getmoneyctrl',
+    param:{
+      pageid:currentPage
+    },
+    callback:function(info){
+      console.log(info)
+      // 获取当前页
+      currentPage=currentPage;
+      totalPage=info.totalCount;
+      pageSize=info.pagesize;
+      //  渲染页面 
+      $(".m_moneyctrl_content").html(template("moneyCtrlTmp",info));
+      page=Math.ceil(totalPage/pageSize);
+      str = currentPage+"/"+page;
 
-        currentPage=currentPage;
-        totalPage=info.totalCount;
-        pageSize=info.pagesize;
-        $(".m_moneyctrl_content").html(template("moneyCtrlTmp",info));
-        page=Math.ceil(totalPage/pageSize);
-        str = currentPage+"/"+page;
-        console.log(page);
-        $(".currentPage button").html("<span>"+str+"</span>");
-      }
-    })
+
+      console.log(page);
+      $(".currentPage button.now").html("<span>"+str+"</span>");
+      select();
+    }
+  });   
   }
 
 
-
-       // 上一页        
-       $(".pre button").click(function(){
+   // 点击上一页，发送请求显示上一页数据        
+     $(".pre button").click(function(){
         if(currentPage>1){
           currentPage--;
          }else{
@@ -43,11 +45,9 @@ $(function(){
          }
          console.log("pre"+ currentPage);   
          str = currentPage+"/"+page;
-         $(".currentPage button").html("<span>"+str+"</span>");
+         $(".currentPage button.now").html("<span>"+str+"</span>");
          render(currentPage);
       })
-
-
 
     //  下一页
       $(".next button").click(function(){ 
@@ -56,9 +56,33 @@ $(function(){
          }else{
            currentPage+=1;   
            str = currentPage+"/"+page;
-           $(".currentPage button").html(str);
+           $(".currentPage button.now").html(str);
            render(currentPage);
          }                      
     
       })
+
+      function select(){
+        // 动态创建选择框
+        var btns="";
+        for(var i=0 ; i < page; i++){     
+          btns+="<button>"+ ( i+1) +"/"+page +"</button>";
+        }
+        $(".dropUp").html(btns); 
+
+      }
+
+    //  点击隐藏/显示
+      $(".now").click(function(){
+        $(".dropUp").slideDown().toggleClass("hide");  
+      })
+
+    //  选择到第几页 
+      $(".dropUp").on("click","button",function(){
+        $(".now").text($(this).text());
+        currentPage =Number( $(this).text().split("/")[0] );
+        render(currentPage);
+        $(".dropUp").slideUp().addClass("hide");
+      });
+  
 })

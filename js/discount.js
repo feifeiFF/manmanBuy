@@ -1,14 +1,15 @@
 $(function(){
   var productid =getSearch("productid");
-   $.ajax({
-     url:"http://127.0.0.1:9090/api/getdiscountproduct",
-     data:{
+
+  new AjaxRequest({
+    url:"getdiscountproduct",
+    param:{
       productid:productid
-     },
-     dataType:"json",
-     success:function(info){
-        console.log(info);
-        $('.m_moneyproduct').html(template("discountTmp",info));
-     }
-   })
+    },
+    callback:function(info){
+      console.log(info);
+      $('.m_moneyproduct').html(template("discountTmp",info));
+    }
+  });
+   
 })

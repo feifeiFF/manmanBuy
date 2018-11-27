@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="./lib/flexible/flexible.js"></script>
-   <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/index.css">
   <title>manmanBuy</title>
 </head>
@@ -36,8 +36,8 @@
       <ul class="clearfix nav_box hig">     
       </ul>
  </div>
-
- <!--  超值折扣推荐 -->
+  
+   <!--  超值折扣推荐 -->
  <div class="m_recommaend">
      <div class="rmd_title">
          <h2>超值折扣推荐  <i class="fa fa-chevron-circle-right fr"> </i></h2>         
@@ -56,7 +56,6 @@
          </ul>
      </div>
  </div>
-
 
  <!--  更多 -->
  <div class="m_more">
@@ -89,16 +88,20 @@
 
  <!--去顶部  -->
  <div class="goTop hide" style="display: block;"><i class="fa fa-arrow-up "></i></div>
- 
  </div>
 
   <!-- 1--导航部分模版   -->
   <script type="text/html" id="navTmp">
     {{  each result v  i }}    
-    <li class="b_red"><a href="{{ v.titlehref}}" data-id="{{ v.indexmenuId }}" class="{{ v.indexmenuId ==7?'more':''}}">{{@ v.img }}<p>{{ v.name }}</p></a></li>  
+    <% if ( i == 7 ){ %>
+      <li class="b_red"><a href="javascript:void(0);" data-id="{{ v.indexmenuId }}" class="{{ v.indexmenuId ==7?'more':''}}">{{@ v.img }}<p>{{ v.name }}</p></a></li>    
+    <% } else { %>    
+    <li class="b_red"><a href="{{ v.titlehref }}" data-id="{{ v.indexmenuId }}" class="{{ v.indexmenuId ==7?'more':''}}">{{@ v.img }}<p>{{ v.name }}</p></a></li>  
+    <% } %>
     {{ /each }}
   </script>
   
+
   <!--2-- 折扣优惠部分模版  -->
   <script type="text/html" id="recommaendTmp">
     {{ each result v i }}
@@ -116,6 +119,7 @@
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./lib/jquery/jquery.min.js"></script>
 <script src="./js/common.js"></script>
+<script src="./js/ajaxTools.js"></script>
 <script src="./js/index.js"></script>
 </body>
 </html>

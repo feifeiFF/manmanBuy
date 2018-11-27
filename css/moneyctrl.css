@@ -364,6 +364,9 @@ em {
   font-size: 0.53333333rem;
   font-weight: normal;
 }
+.hide {
+  display: none;
+}
 /* 头部 */
 .m_header {
   position: relative;
@@ -432,10 +435,22 @@ em {
   padding-top: 0.26666667rem;
   margin-bottom: 0.4rem;
 }
+.m_paging .currentPage {
+  position: relative;
+}
 .m_paging .currentPage button {
   -webkit-appearance: none;
   background-color: #fff;
   border: 0.02666667rem solid #cccccc;
+}
+.m_paging .currentPage .dropUp {
+  opacity: .8;
+  position: absolute;
+  bottom: 0.8rem;
+}
+.m_paging .currentPage .dropUp button {
+  height: 0.66666667rem;
+  border: 1px solid #ccc;
 }
 .m_paging button {
   margin: 0 0.73333333rem;
